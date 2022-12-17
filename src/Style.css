@@ -1,0 +1,281 @@
+
+:root {
+  --cl-1: hsl(0, 89%, 50%);
+  --cl-2: hsl(267.9, 56.8%, 51%);
+  --cl-3: hsl(268, 56%, 21%);
+  --cl-4: hsl(268, 56%, 10%);
+  --cl-5: hsl(2, 18%, 90%);
+  --cl-6: hsl(0, 81%, 21%);
+  --cl-7: hsl(113, 91%, 47%);
+  --cl-8: hsla(0, 0%, 0%, 0.651);
+  --fs-1: 1rem;
+  --width: 25em;
+  --width-2: 10em;
+  --cl-1-1: hsl(150, 89%, 35%);
+  --cl-2-2: hsl(192, 76%, 31%);
+  --cl-3-3: hsl(332, 85%, 19%);
+  --cl-4-4: hsl(69, 78%, 36%);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(45deg, var(--cl-1), var(--cl-3), var(--cl-2));
+}
+
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #7d3bc9;
+    border-radius: 10px;
+    width: 400px;
+    margin: 40px;
+    box-shadow: 0 0 500px 100px var(--cl-3);
+}
+.input-container {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.input-container .input{
+    font-size: 1.3rem;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    overflow: hidden;
+    border: none;
+}
+
+.submit-btn {
+    font-size: 1rem;
+    padding: 8px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: hsl(269, 57%, 10%);
+    color: white;
+    transition: all 0.2s linear;
+}
+.submit-btn:hover {
+    background-color: var(--cl-3);
+}
+
+.input {
+    width: 80%;
+}
+h1 {
+    color: white;
+    font-size: 30px;
+}
+button{
+    border: none;
+    cursor: pointer;
+}
+ul {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+}
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: #341854;
+    transition: all 0.2s linear;
+    margin-bottom: 20px;
+}
+.list-item:hover {
+    background-color: var(--cl-3);
+}
+/* btn container */
+
+.btns-container button{
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: white;
+}
+.btns-container .edit-icon, .btns-container .trash-icon  {
+    transition: all 0.2s linear;
+}
+.btns-container .edit-icon:hover {
+    color: green;
+}
+.btns-container .trash-icon:hover {
+    color: red;
+}
+/* alert actions */
+.alert {
+    letter-spacing: 5px;
+    font-weight: 800;
+    text-decoration: underline;
+    text-align: center;
+}
+.alert-success {
+    color: hsl(135, 100%, 58%);
+}
+.alert-danger {
+    color: rgb(109, 23, 7);
+}
+.alert-container {
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    display: block;
+}
+/* clear btn */
+.clear-list {
+    color: red;
+    margin: 0 auto;
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: var(--cl-5);
+    transition: color 0.17s linear;
+    cursor: pointer;
+    letter-spacing: 4px;
+    font-size: var(--fs-1);
+    margin-bottom: 7px;
+    font-weight: 700;
+}
+.clear-list:hover {
+  color: rgb(172, 0, 0);
+}
+
+
+/* modal btn */
+.modal-btn-container {
+    position: absolute;
+    right: 5vw;
+    top: 5vw;
+    z-index: 10;
+}
+.modal-btn {
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    transition: all 0.2s linear;
+}
+.modal-btn:hover {
+    transform: rotate(90deg);
+}
+
+/* modal container, spead all */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(136, 127, 255, 0.425);
+    z-index: 8;
+    display: none;
+}
+/* show modal */
+.show-modal {
+    display: block;
+}
+.modal {
+    position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);    
+   background-image: linear-gradient(135deg, var(--cl-6), var(--cl-4), var(--cl-3));
+   width: 400px;
+   height: 200px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 10px;
+   flex-direction: column;
+   border-radius: 10px;
+   border-top-right-radius: 0px;
+   color: white;
+}
+.modal-close-btn-container {
+    position: inherit;
+    right: 10px;
+    top: 10px;
+}
+.modal-close-btn-container .close-btn{
+    cursor: pointer;
+    color: rgb(255, 255, 253);
+    font-size: 25px;
+}
+.form-container {
+    display: flex;
+    gap: 8px;
+    /* flex-direction: column; */
+    
+}
+.form-container button {
+    background-color: #7d3bc9;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    transition: all 0.2s linear;
+}
+.form-container button:hover {
+    background-color:hsl(192, 76%, 31%);
+    
+}
+
+/* remove default values from radio buttons */
+
+/* input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    font: inherit;
+    width: 1.15em;
+    height: 1.15em;
+} */
+
+
+
+/* span background */
+.span {
+    aspect-ratio: 1/1;
+    display: inline-block;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.color-icon {
+    font-size: 25px;
+}
+
+
+
+@media (max-width: 400px) {
+    .modal {
+        width: 80vw;
+    }
+}
